@@ -4,9 +4,9 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from openpyxl import load_workbook
-from tickers import tickers_list
+from tickers import get_tickers_list
 
-lista = tickers_list()
+lista = get_tickers_list()
 location = os.getenv("TICKERS_PATH")
 print(location)
 
