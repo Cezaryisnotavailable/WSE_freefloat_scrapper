@@ -1,17 +1,18 @@
 import os
 from openpyxl import load_workbook
 
-location = os.getenv("TICKERS")
+tickers_location = os.getenv("TICKERS")
+print(tickers_location)
 
-workbook = load_workbook(filename=location)
+workbook = load_workbook(filename=tickers_location)
 first_sheet = workbook.active
 
-row = first_sheet.max_row + 1
+rows = first_sheet.max_row + 1
 
 
 def tickers_list():
     tickers_list = []
-    for i in range(1, row):
+    for i in range(1, rows):
         tickers_list.append(first_sheet[("A" + str(i))].value)
     return tickers_list
 
