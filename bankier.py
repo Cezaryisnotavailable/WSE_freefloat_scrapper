@@ -55,7 +55,6 @@ def run_example():
         sheet_1.cell(row=row_number, column=3, value=url)
         row_number += 1
 
-        input()
     workbook.save(location)
 
 
